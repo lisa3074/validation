@@ -1,0 +1,64 @@
+.error {
+  opacity: 0.5;
+  background-color: red;
+}
+
+.error::placeholder {
+  color: white;
+}
+
+form {
+  max-width: 15rem;
+}
+input {
+  outline: none;
+}
+
+button:not(.delete) {
+  width: 5rem;
+  margin: 1.7rem 0 1rem;
+}
+.delete {
+  height: 1.5rem;
+  margin: 0 0 0rem 3rem;
+  align-self: flex-end;
+}
+
+label {
+  display: grid;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.7rem;
+}
+
+.help {
+  color: rgb(179, 179, 179);
+  font-size: 0.6rem;
+  display: inline-block;
+}
+
+p.label {
+  margin: 0 0 0.2rem 0;
+  transform: translate(4px, 20px);
+}
+
+p.label[data-active="true"] {
+  transform: translate(0px, 0px);
+  transition: 0.5s;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.user_info span {
+  font-size: 0.8rem;
+  display: grid;
+}
+.compare_id {
+  display: inline-block;
+}

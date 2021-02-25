@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>validation</title>
+  </head>
+  <body>
+    <form onsubmit="validate(); return false">
+      <label for="fname">
+        <p class="label">First name <span class="help"> || Min 2 and max 25 characters</span></p>
+        <input
+          type="text"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="fname"
+          data-validate="str"
+          data-min="2"
+          data-max="25"
+        />
+      </label>
+      <label for="lname">
+        <p class="label">Last name <span class="help"> || Min 2 and max 25 characters</span></p>
+        <input
+          type="text"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="lname"
+          data-validate="str"
+          data-min="2"
+          data-max="25"
+          maxlength="20"
+        />
+      </label>
+      <label for="phone">
+        <p class="label">Phone number <span class="help"> || 8 digits</span></p>
+        <input
+          type="text"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="phone"
+          data-validate="int"
+          data-min="10000000"
+          data-max="99999999"
+          maxlength="8"
+        />
+      </label>
+      <label for="email">
+        <p class="label">Email <span class="help"> || Use a real email address</span></p>
+        <input
+          type="text"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="email"
+          data-validate="email"
+          data-min="8"
+          data-max="8"
+        />
+      </label>
+      <label for="password">
+        <p class="label">Password <span class="help"> || At least 8 characters, no more than 50</span></p>
+        <input
+          type="password"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="password"
+          data-validate="password"
+          data-min="8"
+          data-max="500"
+        />
+      </label>
+      <label for="password_match">
+        <p class="label">Retype password <span class="help"> || The passwords should match</span></p>
+        <input
+          type="password"
+          onclick="clear_error()"
+          onblur="clear_active()"
+          id="password_match"
+          data-validate="password_match"
+          data-min="8"
+          data-max="500"
+        />
+      </label>
+
+      <button>Signup</button>
+      <button onclick="user.reset(this)">Reset</button>
+    </form>
+
+    <div id="users"></div>
+
+    <script src="validator.js"></script>
+  </body>
+</html>
